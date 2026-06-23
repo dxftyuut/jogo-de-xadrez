@@ -1,8 +1,7 @@
-public class Rainha extends Peca
-{
-    public Rainha(String nome)
-    {
+public class Rainha extends Peca {
+
+    public Rainha(String nome){
         super(nome);
     }
-}
 
+}

@@ -1,26 +1,13 @@
-public abstract class Peca
-{
+public abstract class Peca {
+
     protected String nome;
 
-    public Peca(String nome)
-    {
+    public Peca(String nome){
         this.nome = nome;
     }
 
-    public String getNome()
-    {
-        return nome;
+    public int mover(){
+        return 1;
     }
 
-    public void mover()
-    {
-        System.out.println(nome + " movendo");
-    }
-
-    @Override
-    public String toString()
-    {
-        return nome;
-    }
 }
-

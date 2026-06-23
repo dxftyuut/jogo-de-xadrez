@@ -1,8 +1,7 @@
-public class Bispo extends Peca
-{
-    public Bispo(String nome)
-    {
+public class Bispo extends Peca {
+
+    public Bispo(String nome){
         super(nome);
     }
-}
 
+}

@@ -1,18 +1,14 @@
-abstract class Jogador implements JogadorInterface
-{
+public abstract class Jogador implements JogadorInterface {
+
     protected char cor;
 
-    public Jogador(char cor)
-    {
-        if (cor != 'p' && cor != 'b')
-        {
-            throw new IllegalArgumentException("Cor deve ser p ou b");
+    public Jogador(char cor){
+
+        if(cor != 'b' && cor != 'p'){
+            throw new RuntimeException("Cor invalida");
         }
+
         this.cor = cor;
     }
 
-    public char getCor()
-    {
-        return cor;
-    }
 }

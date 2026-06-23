@@ -1,8 +1,7 @@
-public class Peao extends Peca
-{
-    public Peao(String nome)
-    {
+public class Peao extends Peca {
+
+    public Peao(String nome){
         super(nome);
     }
-}
 
+}
