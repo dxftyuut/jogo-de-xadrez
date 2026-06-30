@@ -128,4 +128,38 @@ public class Tabuleiro {
         return casas[i][j].trim().isEmpty();
     }
 
+    public boolean moverPeca(String codigoPeca, String destino) {
+        if (!casaLivre(destino)) {
+            System.out.println("Não pode mover a peça porque já existe outra peça na casa de destino.");
+            return false;
+        }
+        
+        char colunaChar = Character.toLowerCase(destino.charAt(0));
+        char linhaChar = destino.charAt(1);
+        int destJ = colunaChar - 'a';
+        int destI = 8 - (linhaChar - '0');
+        
+        int origI = -1;
+        int origJ = -1;
+        for (int i = 0; i < 8; i++) {
+            for(int j = 0; j < 8; j++) {
+                if (casas[i][j].equals(codigoPeca)) {
+                    origI = i;
+                    origJ = j;
+                    break;
+                }
+            }
+        }
+        
+        if (origI != -1 && origJ != -1) {
+            casas[origI][origJ] = "   ";
+            casas[destI][destJ] = codigoPeca;
+        } else {
+            System.out.println("Peça não encontrada no tabuleiro.");
+            return false;
+        }
+        
+        return true;
+    }
+
 }
