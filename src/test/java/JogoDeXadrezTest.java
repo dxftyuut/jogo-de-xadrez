@@ -32,4 +32,16 @@ public class JogoDeXadrezTest {
         Tabuleiro tabuleiro = new Tabuleiro();
         assertFalse(tabuleiro.acabouOJogo());
     }
+
+    @Test
+    void verificarCasaLivre() {
+        Tabuleiro tabuleiro = new Tabuleiro();
+        // The board constructor already calls colocarPecas().
+        
+        // a3 should be empty
+        org.junit.jupiter.api.Assertions.assertTrue(tabuleiro.casaLivre("a3"));
+        
+        // a1 should be occupied (T1b)
+        org.junit.jupiter.api.Assertions.assertTrue(!tabuleiro.casaLivre("a1"));
+    }
 }
