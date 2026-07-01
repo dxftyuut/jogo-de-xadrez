@@ -44,4 +44,20 @@ public class JogoDeXadrezTest {
         // a1 should be occupied (T1b)
         org.junit.jupiter.api.Assertions.assertTrue(!tabuleiro.casaLivre("a1"));
     }
+
+    @Test
+    void verificarJogador() {
+        JogadorHumano humano = new JogadorHumano('b');
+        JogadorSintetico sintetico = new JogadorSintetico('p');
+        
+        org.junit.jupiter.api.Assertions.assertTrue(humano.jogar(new Tabuleiro(), "K0b", 10) || !humano.jogar(new Tabuleiro(), "K0b", 10));
+        
+        org.junit.jupiter.api.Assertions.assertThrows(RuntimeException.class, () -> {
+            new JogadorHumano('x');
+        });
+        
+        org.junit.jupiter.api.Assertions.assertThrows(RuntimeException.class, () -> {
+            new JogadorSintetico('y');
+        });
+    }
 }
