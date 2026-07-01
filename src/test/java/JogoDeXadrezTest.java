@@ -9,27 +9,34 @@ public class JogoDeXadrezTest {
     void verificarPecas() {
 
         Bispo bispo = new Bispo("B1b");
+        org.junit.jupiter.api.Assertions.assertNotNull(bispo, "O objeto bispo deve ser criado com sucesso");
         assertEquals(1, bispo.mover());
 
         Cavalo cavalo = new Cavalo("H1b");
+        org.junit.jupiter.api.Assertions.assertNotNull(cavalo, "O objeto cavalo deve ser criado com sucesso");
         assertEquals(1, cavalo.mover());
 
         Peao peao = new Peao("P1b");
+        org.junit.jupiter.api.Assertions.assertNotNull(peao, "O objeto peao deve ser criado com sucesso");
         assertEquals(1, peao.mover());
 
         Rainha rainha = new Rainha("Q0b");
+        org.junit.jupiter.api.Assertions.assertNotNull(rainha, "O objeto rainha deve ser criado com sucesso");
         assertEquals(1, rainha.mover());
 
         Rei rei = new Rei("K0b");
+        org.junit.jupiter.api.Assertions.assertNotNull(rei, "O objeto rei deve ser criado com sucesso");
         assertEquals(1, rei.mover());
 
         Torre torre = new Torre("T1b");
+        org.junit.jupiter.api.Assertions.assertNotNull(torre, "O objeto torre deve ser criado com sucesso");
         assertEquals(1, torre.mover());
     }
 
     @Test
     void verificarTabuleiro() {
         Tabuleiro tabuleiro = new Tabuleiro();
+        org.junit.jupiter.api.Assertions.assertNotNull(tabuleiro, "O objeto tabuleiro deve ser criado com sucesso");
         assertFalse(tabuleiro.acabouOJogo());
     }
 
