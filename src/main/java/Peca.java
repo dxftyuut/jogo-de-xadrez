@@ -6,6 +6,10 @@ public abstract class Peca {
         this.nome = nome;
     }
 
+    public String getNome() {
+        return this.nome;
+    }
+
     public int mover(){
         return 1;
     }
